@@ -30,9 +30,9 @@ c = '''Nobita'''  #Triple quoted Strings
 #     Negative indies can also be used as shown in the above .-1 corresponds to the (length -1) index, -2 to (length -2)
 
 
-len () funcion 
-This function returns the length of the stung
-27
-len("Suraj")  returns 5
+# len () funcion 
+# This function returns the length of the stung
+# 27
+# len("Suraj")  returns 5
     
     
