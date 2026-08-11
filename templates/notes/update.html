@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Note</title>
+</head>
+
+<body>
+
+    <h1>Update Note</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Title</label>
+        <br>
+
+        <input
+            type="text"
+            name="title"
+            value="{{ note.title }}"
+        >
+
+        <br><br>
+
+        <label>Content</label>
+        <br>
+
+        <textarea
+            name="content"
+            rows="10"
+            cols="50"
+        >{{ note.content }}</textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Update Note
+        </button>
+
+    </form>
+
+</body>
+</html>

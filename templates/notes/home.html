@@ -5,12 +5,21 @@
 </head>
 
 <body>
+    <h1>My Notes</h1>
 
-    <h1>Welcome {{name}}</h1>
+    <a href="{% url 'create_note' %}">
+        Create Note
+    </a>
+    
+    <hr>
+    {% for note in notes%}
 
-    <p>You are learning {{course}}.</p>
-
-    <p>My Goal is {{Goal}}
-
+        <h2>{{note.title}}</h2>
+        <p>{{note.content}}<p/>
+        <a href="{% url 'update_note' note.id %}">
+        Edit
+        </a>
+        <hr>
+    {% endfor %}
 </body>
 </html>
