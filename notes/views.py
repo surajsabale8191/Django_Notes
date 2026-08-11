@@ -56,3 +56,11 @@ def update_note(request, note_id):
     }
 
     return render(request, "notes/update.html", context)
+
+def delete_note(request, note_id):
+
+    note = Note.objects.get(id=note_id)
+
+    note.delete()
+
+    return redirect("notes_home")

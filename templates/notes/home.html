@@ -16,9 +16,18 @@
 
         <h2>{{note.title}}</h2>
         <p>{{note.content}}<p/>
-        <a href="{% url 'update_note' note.id %}">
-        Edit
-        </a>
+        <div>
+            <div>
+                <a href="{% url 'update_note' note.id %}">
+                Edit
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'delete_note' note.id %}">
+                Delete
+                </a>
+            </div>
+        </div>
         <hr>
     {% endfor %}
 </body>
